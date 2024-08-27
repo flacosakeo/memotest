@@ -1,16 +1,19 @@
 #tablero {
     display: flex;
     flex-wrap: wrap;
-    width: 80%;
+    width: 99%;
     margin: 0 auto;
 }
 
 .tarjeta {
     width: 75px;
     height: 75px;
-    margin: 5px;
+    margin: 3px;
     position: relative;
-    background-color: #ccc; /* Color de fondo visible antes de mostrar la imagen */
+    background-image: url('imagenes/reverso.png'); /* Imagen de fondo para la parte posterior */
+    background-size: cover; /* Asegura que la imagen cubra todo el div */
+    background-position: center;
+    /*background-color: #ccc; /* Color de fondo visible antes de mostrar la imagen */
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -28,10 +31,12 @@
 
 .tarjeta .nombre-imagen {
     font-size: 0.65vw;
-    color: #333;
+    color: #333;    
     display: none; /* Oculta nombre por defecto */
 }
-
+.tarjeta.mostrada {
+    background-image: none; /* Elimina la imagen de fondo cuando se voltea la tarjeta */
+}
 .tarjeta.mostrada img,
 .tarjeta.mostrada .nombre-imagen {
     display: block; /* Muestra imagen y nombre cuando la tarjeta esté volteada */
@@ -43,6 +48,6 @@
         height: 50px;
     }
     .tarjeta .nombre-imagen {
-        font-size: 1.25vw;
+        font-size:6px;
     }
 }
