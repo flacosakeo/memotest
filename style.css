@@ -1,33 +1,48 @@
 #tablero {
     display: flex;
     flex-wrap: wrap;
-    width: 90%;
+    width: 80%;
     margin: 0 auto;
 }
+
 .tarjeta {
-    width: 90px;
-    height: 120px;
+    width: 75px;
+    height: 75px;
     margin: 5px;
     position: relative;
     background-color: #ccc; /* Color de fondo visible antes de mostrar la imagen */
     cursor: pointer;
-    text-align: center;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+    overflow: hidden; /* Oculta el contenido que sale del contenedor */
 }
+
 .tarjeta img {
-    width: 100%;
-    height: max-content;
-    display: none; /* Ocultar imagen por defecto */
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain; /* Ajusta la imagen dentro del contenedor sin recortar */
+    display: none; /* Oculta imagen por defecto */
 }
+
 .tarjeta .nombre-imagen {
-    font-size: 14px;
+    font-size: 0.65vw;
     color: #333;
-    display: none; /* Ocultar nombre por defecto */
+    display: none; /* Oculta nombre por defecto */
 }
+
 .tarjeta.mostrada img,
 .tarjeta.mostrada .nombre-imagen {
-    display: block; /* Mostrar imagen y nombre cuando la tarjeta esté volteada */
+    display: block; /* Muestra imagen y nombre cuando la tarjeta esté volteada */
+}
+
+@media (max-width:600px){
+    .tarjeta {
+        width: 50px;
+        height: 50px;
+    }
+    .tarjeta .nombre-imagen {
+        font-size: 1.25vw;
+    }
 }
