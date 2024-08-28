@@ -1,8 +1,15 @@
+body{
+    background-image: url('imagenes/fondo.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 #tablero {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     width: 99%;
-    margin: 0 auto;
+    height: 100%;
+    margin: 1%;   
 }
 
 .tarjeta {
@@ -10,7 +17,7 @@
     height: 75px;
     margin: 3px;
     position: relative;
-    background-image: url('imagenes/reverso.png'); /* Imagen de fondo para la parte posterior */
+    background-image: url('imagenes/reverso1.png'); /* Imagen de fondo para la parte posterior */
     background-size: cover; /* Asegura que la imagen cubra todo el div */
     background-position: center;
     /*background-color: #ccc; /* Color de fondo visible antes de mostrar la imagen */
@@ -36,6 +43,7 @@
 }
 .tarjeta.mostrada {
     background-image: none; /* Elimina la imagen de fondo cuando se voltea la tarjeta */
+    /*background-color: white;*/
 }
 .tarjeta.mostrada img,
 .tarjeta.mostrada .nombre-imagen {
