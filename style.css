@@ -15,7 +15,7 @@ body{
 .tarjeta {
     width: 75px;
     height: 75px;
-    margin: 3px;
+    margin: 1%;
     position: relative;
     background-image: url('imagenes/reverso1.png'); /* Imagen de fondo para la parte posterior */
     background-size: cover; /* Asegura que la imagen cubra todo el div */
@@ -26,7 +26,7 @@ body{
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    overflow: hidden; /* Oculta el contenido que sale del contenedor */
+    /*overflow: hidden; /* Oculta el contenido que sale del contenedor */
 }
 
 .tarjeta img {
@@ -37,8 +37,9 @@ body{
 }
 
 .tarjeta .nombre-imagen {
-    font-size: 0.65vw;
-    color: #333;    
+    font-size: 12px;
+    font-weight: bold;
+    color: #000000;    
     display: none; /* Oculta nombre por defecto */
 }
 .tarjeta.mostrada {
@@ -56,6 +57,12 @@ body{
         height: 50px;
     }
     .tarjeta .nombre-imagen {
-        font-size:6px;
+        font-size:8px;
+        
+    }
+    body{
+        height: 100vh;
+        background-size: cover;
+        background-position: center;
     }
 }
