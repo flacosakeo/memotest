@@ -61,7 +61,7 @@ body{
         
     }
     body{
-        height: 700px;
+        height: max-content;
         background-size: cover;
         background-position: center;
     }
