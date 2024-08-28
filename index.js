@@ -5,7 +5,8 @@ document.getElementById('iniciar').addEventListener('click', () => {
                     'imagenes/naranja.png', 'imagenes/oso.png', 'imagenes/pajaro.png', 'imagenes/pelotabasquet.png',
                     'imagenes/pelotafutbol.png', 'imagenes/pelotaplaya.png', 'imagenes/pelotatenis.png', 'imagenes/perro.png',
                     'imagenes/sandia.png', 'imagenes/tomate.png', 'imagenes/tortuga.png', 'imagenes/triangulo.png', 
-                    'imagenes/uva.png', 'imagenes/trebol.png', 'imagenes/diamante.png', 'imagenes/corazon.png'];
+                    'imagenes/uva.png', 'imagenes/trebol.png', 'imagenes/diamante.png', 'imagenes/corazon.png',
+                    'imagenes/pica.png', 'imagenes/tucan.png'];
     let tarjetasDuplicadas = tarjetas.concat(tarjetas);
     tarjetasDuplicadas = tarjetasDuplicadas.sort(() => Math.random() - 0.5);
     let tablero = document.getElementById('tablero');
