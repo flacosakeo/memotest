@@ -4,15 +4,71 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
     <title>Memotest</title>
 </head>
 <body>
-    <div id="botones">
-        <button id="iniciar">Iniciar</button>
+    <div class="contenedor-principal">
+        <header class="header-juego">
+            <h1 class="titulo">🎮 MEMOTEST</h1>
+            
+            <div class="panel-controles">
+                <div class="control-dificultad">
+                    <label for="dificultad">Dificultad:</label>
+                    <select id="dificultad">
+                        <option value="facil">Fácil (8 pares)</option>
+                        <option value="medio" selected>Medio (15 pares)</option>
+                        <option value="dificil">Difícil (30 pares)</option>
+                    </select>
+                </div>
+                <button id="iniciar" class="btn-principal">Nuevo Juego</button>
+            </div>
+
+            <div class="panel-estadisticas">
+                <div class="stat-card">
+                    <span class="stat-label">Movimientos</span>
+                    <span id="stat-movimientos" class="stat-valor">0</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-label">Pares</span>
+                    <span id="stat-pares" class="stat-valor">0 / 15</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-label">Tiempo</span>
+                    <span id="stat-tiempo" class="stat-valor">00:00</span>
+                </div>
+            </div>
+        </header>
+
+        <main id="tablero" class="tablero"></main>
     </div>
-    <div id="tablero">
-        
+
+    <!-- Modal Victoria -->
+    <div id="modal-victoria" class="modal oculto">
+        <div class="modal-card">
+            <div class="modal-icono">🏆</div>
+            <h2>¡Felicitaciones!</h2>
+            <p>¡Has completado el tablero con éxito!</p>
+            <div class="resumen-partida">
+                <div class="resumen-item">
+                    <span>Dificultad:</span>
+                    <strong id="resumen-dificultad">Medio</strong>
+                </div>
+                <div class="resumen-item">
+                    <span>Movimientos:</span>
+                    <strong id="resumen-movimientos">0</strong>
+                </div>
+                <div class="resumen-item">
+                    <span>Tiempo:</span>
+                    <strong id="resumen-tiempo">00:00</strong>
+                </div>
+            </div>
+            <button id="btn-reintentar" class="btn-principal btn-modal">Jugar de nuevo</button>
+        </div>
     </div>
+
     <script src="index.js"></script>
 </body>
 </html>
